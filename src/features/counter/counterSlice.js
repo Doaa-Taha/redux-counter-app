@@ -53,6 +53,16 @@ export const counterSlice = createSlice({
       });
   },
 });
+console.log(counterSlice.actions.increment()) // {type: 'counter/increment', payload: undefined}
+console.log(counterSlice.actions) // {increment: ƒ, decrement: ƒ, incrementByAmount: ƒ}
+console.log(counterSlice.reducer)
+/** 
+ * ƒ (state, action) {
+     if (!_reducer) _reducer = buildReducer();
+     return _reducer(state, action);
+}
+*/
+console.log(counterSlice.reducer({value: 10}, counterSlice.actions.decrement())) // {value: 9}
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
