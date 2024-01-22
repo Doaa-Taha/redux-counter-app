@@ -7,4 +7,4 @@ export const store = configureStore({
   },
 });
 
-console.log(store.dispatch(incrementAsync(13)))
+console.log(store.dispatch(incrementAsync(20)))

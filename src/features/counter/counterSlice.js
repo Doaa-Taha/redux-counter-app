@@ -19,17 +19,16 @@ const initialState = {
 //     return response.data;
 //   }
 // );
-export const incrementAsync = amount => {
-  return async (dispatch, getState) => {
+export const incrementAsync = amount => async (dispatch) => {
     try {
       const res = await fetchCount(amount)
       console.log(res)
-      return res.data
+      dispatch(incrementByAmount(amount))
     } catch (err) {
       console.log(err)
     }
   }
-}  
+
 
 export const counterSlice = createSlice({
   name: 'counter',
