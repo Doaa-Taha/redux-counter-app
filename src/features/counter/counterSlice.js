@@ -73,7 +73,7 @@ console.log(counterSlice.reducer)
      return _reducer(state, action);
 }
 */
-console.log(counterSlice.reducer({value: 10}, counterSlice.actions.decrement())) // {value: 9}
+// console.log(counterSlice.reducer({value: 10}, counterSlice.actions.decrement())) // {value: 9}
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
