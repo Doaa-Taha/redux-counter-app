@@ -19,11 +19,12 @@ const initialState = {
 //     return response.data;
 //   }
 // );
-export const incrementAsync = amount => async (dispatch) => {
+export const incrementAsync = amount => async (dispatch, getState) => {
     try {
       const res = await fetchCount(amount)
       console.log(res)
       dispatch(incrementByAmount(amount))
+      console.log(getState())
     } catch (err) {
       console.log(err)
     }
